@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+{% if spy %}
+<p>You are the spy!</p>
+{% else %}
+<p>You are not the spy!</p>
+<p>The location: {{ location }}</p>
+{% endif %}
+
+<h5 class="display-5">Possible locations:</h5>
+{% for possible_location in possible_locations %}
+<p>{{ possible_location }}</p>
+{% endfor %}
+
+<a id="end-game" class="btn btn-default" style="display: none" href="/end-game">End game</a>
+{% endblock content %}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="/enter-name/{{ room_id }}" method="post">
+    <label for="username">Enter your name:</label><br>
+    <input id="username" name="username">
+    <input type="submit" value="Submit">
+</form>
+{% endblock content %}
